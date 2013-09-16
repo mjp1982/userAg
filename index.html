@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>userAgent for Mobile</title>
+</head>
+
+<body id="body"><!-- ID on body, useless if you use jQuery -->
+        <script>
+          // get the body tag
+          var mbody=document.getElementById('body');
+          // detect os or browser
+          var check={any:function(){return navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)}};
+          // add class mobile if on mobile
+          if(check.any())mbody.setAttribute('class','mobile');mbody.setAttribute('class','mobile');mbody.className='mobile';
+        </script>
+         <!-- use .mobile as needed, here I set a black background only on mobile devices -->
+        <style type="text/css">body.mobile {background:#000}</style>
+</body>
+</html>
