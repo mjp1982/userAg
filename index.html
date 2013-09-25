@@ -7,12 +7,10 @@
 
 <body id="body"><!-- ID on body, useless if you use jQuery -->
         <script>
-          // get the body tag
-          var mbody=document.getElementById('body');
-          // detect os or browser
-          var check={any:function(){return navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)}};
-          // add class mobile if on mobile
-          if(check.any())mbody.setAttribute('class','mobile');
+          if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)){
+          var mb = document.getElementsByTagName("body");
+          mb[0].classList.add("mobile");
+        }
         </script>
          <!-- use .mobile as needed, here I set a black background only on mobile devices -->
         <style type="text/css">body.mobile {background:#000}</style>
